@@ -1,36 +1,46 @@
 /**
  * Custom reveal.js theme for Mediacurrent
  */
+
 /*********************************************
  * Variables
  *********************************************/
+
+// Company Brand Colors
+$orange: #d09215;
+$blue: #003954;
+$green: #9fc855;
+$light-gray: #dbe8ec;
+$medium-gray: #7f9aa0;
+$dark-gray: #344041;
+$darker-gray: #222f31;
+$black: #1a2526;
+$white: #fff;
+
+
+$sans-serif: "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
-/* line 26, mediacurrent.scss */
 body {
-  background: #fff;
+  background: $white;
 }
 
-/* line 30, mediacurrent.scss */
 .reveal {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  font-family: $sans-serif;
   font-size: 36px;
   font-weight: 300;
-  color: #1a2526;
-}
+  color: $black; }
 
-/* line 36, mediacurrent.scss */
 ::selection {
   color: white;
   background: #ff5e99;
-  text-shadow: none;
-}
+  text-shadow: none; }
 
 /*********************************************
  * HEADERS
  *********************************************/
-/* line 44, mediacurrent.scss */
 .reveal h1,
 .reveal h2,
 .reveal h3,
@@ -38,7 +48,7 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #d09215;
+  color: $orange;
   line-height: 0.9em;
   letter-spacing: -0.025em;
   font-weight: 600;
@@ -47,7 +57,6 @@ body {
 /*********************************************
  * CALLOUT TEXT
  *********************************************/
-/* line 60, mediacurrent.scss */
 .reveal .large {
   font-size: 52px;
 }
@@ -55,9 +64,8 @@ body {
 /*********************************************
  * LINKS
  *********************************************/
-/* line 67, mediacurrent.scss */
 .reveal a:not(.image) {
-  color: #d09215;
+  color: $orange;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
@@ -65,10 +73,8 @@ body {
   -o-transition: color .15s ease;
   transition: color .15s ease;
 }
-
-/* line 76, mediacurrent.scss */
 .reveal a:not(.image):hover {
-  color: #7f9aa0;
+  color: $medium-gray;
   text-shadow: none;
   border: none;
 }
@@ -76,7 +82,6 @@ body {
 /*********************************************
  * IMAGES
  *********************************************/
-/* line 85, mediacurrent.scss */
 .reveal section img {
   margin: .5em 0px;
 }
@@ -84,72 +89,51 @@ body {
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
-/* line 92, mediacurrent.scss */
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
-  border-right-color: #d09215;
-}
+  border-right-color: $orange; }
 
-/* line 96, mediacurrent.scss */
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
-  border-left-color: #d09215;
-}
+  border-left-color: $orange; }
 
-/* line 100, mediacurrent.scss */
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #d09215;
-}
+  border-bottom-color: $orange; }
 
-/* line 104, mediacurrent.scss */
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-  border-top-color: #d09215;
-}
+  border-top-color: $orange; }
 
-/* line 108, mediacurrent.scss */
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #7f9aa0;
-}
+  border-right-color: $medium-gray; }
 
-/* line 111, mediacurrent.scss */
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #7f9aa0;
-}
+  border-left-color: $medium-gray; }
 
-/* line 114, mediacurrent.scss */
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #7f9aa0;
-}
+  border-bottom-color: $medium-gray; }
 
-/* line 117, mediacurrent.scss */
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #7f9aa0;
-}
+  border-top-color: $medium-gray; }
 
 /*********************************************
  * PROGRESS BAR
  *********************************************/
-/* line 123, mediacurrent.scss */
 .reveal .progress {
-  background: black;
-}
+  background: darken($black, 50%); }
 
-/* line 126, mediacurrent.scss */
 .reveal .progress span {
-  background: #d09215;
+  background: $orange;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -o-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
-  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
-}
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
 
 /*********************************************
  * OVERRIDES
  *********************************************/
-/* line 137, mediacurrent.scss */
 .reveal blockquote {
   text-align: center;
   display: block;
@@ -158,51 +142,46 @@ body {
   margin: 1em auto;
   padding: .5em;
   font-weight: 600;
-  background: #344041;
+  background: $dark-gray;
 }
 
-/* line 148, mediacurrent.scss */
 .reveal section pre code {
-  display: block;
-  padding: 0.5em;
-  background: #1a2526;
+  display: block; padding: 0.5em;
+  background: $black;
   max-height: none;
 }
 
 /*********************************************
  * AD HOC CUSTOM CLASSES (Originally by Larry)
  *********************************************/
-/* line 158, mediacurrent.scss */
+
 .reveal pre {
   width: 100%;
 }
 
-/* line 162, mediacurrent.scss */
 q:before {
   content: '\201C';
 }
-
-/* line 165, mediacurrent.scss */
 q:after {
   content: '\201D';
 }
 
-/* line 169, mediacurrent.scss */
 .reveal section img {
   border: 0px;
   box-shadow: none;
   background: none;
 }
 
-/* line 175, mediacurrent.scss */
 p.bigtext {
   font-size: 150%;
 }
 
-/* line 179, mediacurrent.scss */
-.sidebar {
-  float: left;
-  width: 10%;
-  height: 100%;
-  background-color: #003954;
+.header {
+  width: 100%;
+  height: 10%;
+  background-color: $blue;
+
+  img {
+    float: right;
+  }
 }
