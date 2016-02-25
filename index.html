@@ -37,7 +37,7 @@
 	<body>
     <div class="header">
     <a href="http://www.mediacurrent.com/">
-        <img src="mediacurrent/logo.png" alt="Mediacurrent" />
+        <img src="mediacurrent/logo.png" alt="Mediacurrent" height="45px"/>
     </a>
     </div>
 <div class="reveal">
@@ -45,78 +45,535 @@
 	<!-- Any section element inside of this container is displayed as a slide -->
 <div class="slides">
 <section>
-   <h2>Cracking the Shell</h2>
-   Command line for the Drupaler
-</section>
+   <h1>Cracking the Shell</h1>
+   <p>Command line for the Drupaler</p>
 
-<section>
-  <section>
-    <h2>Vim</h2>
-      <p>Vim can do anything</p>
-        <aside class="notes">
-         <p>Put notes here</p>
-        </aside>
-  </section>
-
-  <section>
-    <h2>Vim plugins</h2>
-    <aside class="notes">
-    @todo: Add my favorite vim plugins
+  <aside class="notes">
+    Ask how many command line experts we have. How many of you don't spend much time in the command line.
   </aside>
-  </section>
-</section>
-<section>
-  <section>
-     <h2>Tmux</h2>
-  </section>
-
-  <section>
-    <h2>Tmux config</h2>
-  </section>
 </section>
 
 <section>
+  <h1>What is the Shell?</h1>
+  <p>
+    <blockqoute class="fragment">"A shell is a user interface for access to an operating system's services."</blockqoute>
+  </p>
+</section>
+
+<section>
+  <h2>CLI (command-line interface)</h2>
+      <p>Text command lines</p>
+</section>
+
+<section>
+  <h2>Strengths of the CLI</h2>
+  <ul>
+    <p class="fragment">Light on Resources</p>
+    <p class="fragment">Concise</p>
+    <p class="fragment">Scriptable for Automation</p>
+  </ul>
+</section>
+
+<section>
+    <h2>Weaknesses of the CLI</h2>
+      <p class="fragment">Commands are not obvious</p>
+      <p class="fragment">Not beginner friendly</p>
+</section>
+
+<section>
+  <h2>Why should learn to use the Shell</h2>
+</section>
+
+<section>
+    <img src="assets/unix-system.gif" width="100%" />
+</section>
+
+<section>
+    <h3>67.8% to 98.3% of the Servers on the Net are using Unix or Unix like systems<h3>
+        <aside class="notes">
+          Unix systems have won. You will never regret learning Unix tools.
+        </aside>
+</section>
+
+<section>
+ <blockqoute>"I have never regretted learning to use a command line tool."</blockqoute>
+ <p> <br />~ Me</p>
+</section>
+
+<section>
+    <h2>CLI's are everywhere</h2>
+    <p>PHP</p>
+    <p>Github</p>
+    <p>MySQL</p>
+    <p>Drupal</p>
+    <p>Grunt</p>
+    <p>Sass</p>
+    <aside class="notes">
+      The aren't going away. GUI's are great but CLI's make the world tick. Programming languages have them Popular web services like Github have them. And your computer has them
+    <aside>
+</section>
+<section>
+  <h3>Scripts / Automation</h3>
+     <aside class="notes">
+      You're a developer. You can save time and automate the mundane by writing scripts that execute the commands you learn.
+    </aside>
+</section>
+
+<section>
+  <h3>Customization / Personalization</h3>
+  <p>Make your computer work in the way you want it to.</p>
+</section>
+
+<section>
+ INSERT DEMO OF BOB'S AWESOME SETUP HERE
+</section>
+
+<section>
+  <h3>Portability (.dot files)</h3>
+  <p class="fragment">Configuration files.</p>
+  <p class="fragment">Begin with a .</p>
+  <p class="fragment">Live in ~</p>
+  <aside class="notes">
+  Dot files are files that begin with a . and are therefore invisible to file browsers on most systems.
+  </aside>
+</section>
+
+<section>
+  <h3>Making the most of Dotfiles</h3>
+  <p class="fragment">Symlink to a single directory</p>
+  <p class="fragment">Track in Git</p>
+  <p class="fragment">You can take your customizations with you.</p>
+  <p class="fragment">Look at other dotfiles and steal liberally</p>
+  <p class="fragment">Add small bits at a time and learn how to use them</p>
+</section>
+
+<section>
+ <h2>Symlink</h2>
+      <p>A Symbolic link is any file that contains a reference to another file or directory in the form of an absolute or relative path.</p>
+      <pre><code>ln -s source_file target_file</code></pre>
+</section>
+
+<section>
+  <h3>What do you put in your dotfiles repo?</h3>
+</section>
+
+<section>
+  <h3>The Shell</h3>
+  <p class="fragment"> <a href="https://www.gnu.org/software/bash/">Bash</a>:
+  <br />the GNU Project's shell and is what I use.</p>
+  <p class="fragment"> <a href="http://www.zsh.org/">ZSH</a>:
+  <br /> a shell designed for interactive use, although it is also a powerful scripting language</p>
+  <p class="fragment"> <a href="https://fishshell.com/">Fish</a>:
+   <br />a smart and user-friendly command line shell for OS X, Linux, and the rest of the family.</p>
+  <aside class="notes">
+    I use BASH but there are other great and more powerful and fancy shells like ZSH and Fish.
+  </aside>
+</section>
+
+<section>
+  <h3>Environment / $PATH</h3>
+  <p>Add things to your path</p>
+  <aside class="notes">
+    PATH is an environment variable on Unix-like operating systems, DOS, OS/2, and Microsoft Windows, specifying a set of directories where executable programs are located. https://en.wikipedia.org/wiki/PATH_(variable)
+  </aside>
+</section>
+
+<section>
+    <h3>Alias</h3>
+      <p>Shortcuts to commands.</p>
+      <pre>
+        <code>
+        alias l='ls -lhGt'  # -l long listing, most recent first
+        alias la="ls -A -l -G"
+        alias c='clear'
+        </code>
+      </pre>
+</section>
+
+<section data-state="background" data-background-video="videos/aliases.mp4" data-background-video-loop data-background-color="#003954">
+</section>
+<section>
+      <h3>Functions</h3>
+      <pre>
+      <code>
+        function take() {
+            mkdir -p "$1"
+            cd "$1"
+        }
+      </code>
+      </pre>
+</section>
+
+<section data-state="background" data-background-video="videos/take.mp4" data-background-video-loop data-background-color="#003954">
+</section>
+<section>
+  <h2>SSH</h2>
+</section>
+
+<section>
+  <h3>~/.ssh/config</h3>
+  <p>Save yourself from trying to remember IP addresses and port numbers</p>
+    <img src="assets/ssh_config.png" alt="" width="" height="" border="0" />
+</section>
+
+<section>
+  <h3>Privacy and Security</h3>
+  <p>Don't put sensitve info in your Git repo if you plan to make it public.</p>
+  <aside class="notes">
+  <p>Include this info in files outside the repo.</p>
+</aside>
+</section>
+
+<section>
+
+  <section>
+    <h2>Git</h2>
+    <p class="fragment">Don't use a GUI</p>
+    <p class="fragment">Learn to use the commands</p>
+  </section>
   <section>
     <h2>Git config</h2>
-  </section>
-  <section>
-    <h2>Git completion</h2>
+    <p class="fragment">vim ~/.gitconfig</p>
+     <img src="assets/git_config.png" class="fragment" alt="" width="" height="" border="0" />
   </section>
   <section>
     <h2>Git aliases</h2>
+   <img src="assets/git-aliases.png" alt="" width="100%" height="" border="0" />
   </section>
+
+  <section data-state="background" data-background-video="videos/git-aliases.mp4" data-background-video-loop data-background-color="#003954">
+  </section>
+
   <section>
     <h2>Ignoring files</h2>
-    * Global
-    * Repo
-    * Local with exclude
+    <p>Per machine: ~/.gitconfig</p>
+    <p>Per project: .gitignore file in the repository</p>
+    <p>Per repo:  .git/info/excludes</p>
   </section>
+
   <section>
     <h2>Git Hooks</h2>
   </section>
+
   <section>
-    <h2>Pre commit code linting</h2>
+    <h2>Pre commit </h2>
+     <p>Code linting.</p>
+      <p> <a href="https://github.com/andrewmriley/drupal-site-precommit">github.com/andrewmriley/drupal-site-precommit</a></p>
   </section>
+
   <section>
-    <h2>Post commit tasks</h2>
+    <h2>Post commit</h2>
+     <p>Do tasks like copy your commit message to your clipboard?</p>
+     <pre><code>
+#!/bin/bash
+
+# Create dayone entry with last commit message
+git log --pretty=format:"%s @${PWD##*/}%n%b" -1 HEAD | dayone new
+
+# Copy last commit message copied to clipboard
+git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
+</code>
+     </pre>
   </section>
+
   <section>
-    <h2>.git_template</h2>
+     <p class="fragment fade-out">But I forget to add those to my repo</p>
+    <h2 class="fragment">.git_template</h2>
+     <p class="fragment">In your ~/.gitconfig</p>
+    <pre class="fragment"><code>
+  [alias]
+    init = init --template ~/.git_template
+
+  [init]
+  templatedir = ~/.git_template
+</code></pre>
+    <p class="fragment">A good tutorial for setting this up. <a href="http://brettterpstra.com//2014/03/20/logging-git-commits-with-doing/">Logging Git commits with doing</a></p>
   </section>
+
+  <section>
+    <h2>Git tools</h2>
+  </section>
+
   <section>
     <h2>Tig</h2>
   </section>
+
+  <section data-state="background" data-background-video="videos/tig.mp4" data-background-video-loop data-background-color="#003954">
+  </section>
+
   <section>
-    <h2>Git flow</h2>
+    <h2> <a href="https://github.com/michaeldfallen/git-radar">Git radar</a></h2>
+     <img src="assets/git-radar-file-status.png" alt="" width="" height="" border="0" />
+    <p class="fragment">A more basic tool, <a href="https://github.com/djl/vcprompt">vcprompt</a>.</p>
+  </section>
+
+  <section>
+        <h2><a href="https://github.com/nvie/gitflow">Git flow</a></h2>
+         <img src="assets/gitflow-branch.png" alt="gitflow branch" height="500px" border="0" />
+  </section>
+
+</section>
+<section>
+  <section>
+    <h2>Vim</h2>
+  </section>
+
+  <section>
+    <h2>Why Vim?</h2>
+  </section>
+
+  <section  data-state="background" data-background="assets/carey-typing.gif" data-background-size="95%" >
+    <aside class="notes">
+      RSA
+    </aside>
+  </section>
+
+  <section>
+          I plan on coding for many years.
+  </section>
+
+  <section>
+    <h2>My editor history</h2>
+    <p>Netbeans</p>
+    <p>Smultron</p>
+    <p>BBEdit</p>
+    <p>Textmate</p>
+    <p>SublimeText 2</p>
+    <p>PHPStorm</p>
+  </section>
+
+  <section>
+          I plan on coding for many years.
+    <aside class="notes">
+      I plan on coding for many years.
+      Investment
+    </aside>
+  </section>
+
+  <section>
+    <h2>Tips:</h2>
+    Visual block
+  </section>
+
+  <section  data-state="background" data-background-video="videos/vim-visual-block.mp4" data-background-video-loop data-background-color="#003954">
+  </section>
+
+  <section>
+    Jump to class declaration
+  </section>
+
+  <section  data-state="background" data-background-video="videos/vim-ctags.mp4" data-background-video-loop data-background-color="#003954">
+  </section>
+
+  <section>
+    <h2>Plugins</h2>
+  </section>
+
+  <section>
+    <h2>Nerdtree - File management</h2>
+  </section>
+
+  <section data-state="background"  data-background-video="videos/vim-nerdtree.mp4" data-background-video-loop data-background-color="#003954">
+  </section>
+
+  <section>
+    <h2> <a href="https://github.com/ctrlpvim/ctrlp.vim">ctrlP.vim</a></h2>
+    Fuzzy file, buffer, mru, tag, etc finder.
+  </section>
+
+  <section  data-state="background" data-background-video="videos/vim-ctrlp.mp4" data-background-video-loop data-background-color="#003954">
+  </section>
+  <section>
+    <h2>Vim Fugitive - Git</h2>
+     <p>A Git wrapper so awesome, it should be illegal.</p>
+  </section>
+
+  <section  data-state="background" data-background-video="videos/vim-fugitive.mp4" data-background-video-loop data-background-color="#003954">
+  </section>
+
+  <section>
+    <h2>Gitgutter - Git</h2>
+  </section>
+
+  <section  data-state="background" data-background-video="videos/vim-gitgutter.mp4" data-background-video-loop data-background-color="#003954">
+  </section>
+
+  <section>
+    <h2>Vdebug - Debugging</h2>
+  </section>
+
+  <section>
+    <h2><a href="https://github.com/tpope/vim-surround">Vim Surround</a></h2>
+  </section>
+
+  <section  data-state="background" data-background-video="videos/vim-surrond.mp4" data-background-video-loop data-background-color="#003954">
+  </section>
+
+  <section>
+    <h2><a href="https://www.drupal.org/project/vimrc
+">Vim Plugin For Drupal</a></h2>
+    drupal.org/project/vimrc
+  </section>
+
+  <section  data-state="background" data-background-video="videos/vim-drupalvimrc.mp4" data-background-video-loop data-background-color="#003954">
+  </section>
+
+  <section>
+    <h2> <a href="https://github.com/vim-airline/vim-airline">Vim Airline</a></h2>
+    <p>Make Vim pretty and more useful. Lean & mean status/tabline for vim that's light as air. </p>
+   <img src="assets/vim-airline.png" alt="" width="100%" height="" border="0" />
+  </section>
+
+  <section>
+    <h2> <a href="https://github.com/VundleVim/Vundle.vim">Vundle </a>- Plugin management</h2>
+      <img src="assets/vim-vundle.png" alt="" width="" height="" border="0" />
+  </section>
+
+  <section>
+    <h2>The .vimrc</h2>
+    <aside class="notes">
+    Your life's work. Why re-learn how to do things with every new editor that comes down the pike. Much like Drupal, the answer to can I do x with Vim is always yes.
+    This could be a whole talk.
+    </aside>
   </section>
 </section>
 
 <section>
-  Drush
+  <section>
+    <h2>Drush</h2>
+      <h3>Basic uses</h3>
+        Download and enable modules
+        Backup and import databases
+        Run updates
+        drush ws --tail
+        Log in as a user
+        registry rebuild
+  </section>
+  <section>
+      <h3>Aliases</h3>
+        Local and remote
+        drush use
+  </section>
 </section>
 
 <section>
-  Drupal Console
+  <section>
+    <h3>Drupal Console</h3>
+  </section>
+
+  <section>
+      <h3>Drupal 8 only</h3>
+  </section>
+
+  <section>
+      <h3>Install Drupal</h3>
+  </section>
+
+  <section>
+      <h3>Generate content</h3>
+  </section>
+
+  <section>
+      <h3>Build modules</h3>
+  </section>
+
+  <section>
+      <h3>Manage site</h3>
+  </section>
+</section>
+
+<section>
+  <section>
+    <h3>Tmux - Bringing it All Together</h3>
+      tmux is a terminal multiplexer
+    <aside class="notes">
+      What is a terminal multiplexer? It lets you switch easily between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal. And do a lot more.
+    </aside>
+  </section>
+
+  <section>
+      <h3>Sessions</h3>
+  </section>
+
+  <section>
+      <h3>Windows</h3>
+  </section>
+
+  <section>
+      <h3>Panes</h3>
+  </section>
+
+  <section>
+      <h3>Customization (.tmux.conf)</h3>
+  </section>
+
+  <section>
+      <h3>Tmuxinator</h3>
+  </section>
+
+  <section>
+        <h3>Manage complex tmux sessions easily</h3>
+  </section>
+
+  <section>
+        <h3>Projects</h3>
+  </section>
+
+  <section>
+        <h3>Switch projects quickly</h3>
+  </section>
+
+  <section>
+        <h3>Copy projects</h3>
+  </section>
+
+  <section>
+      <h3>Using Drush aliases with tmux</h3>
+  </section>
+</section>
+
+<section>
+  <h1>Resources</h1>
+  <p><a href="https://bitbucket.org/kepford/dotfiles"> My Dot files</a></p>
+   <p><a href="https://dotfiles.github.io/">dotfiles - Your unofficial guide to dotfiles on GitHub.</a></p>
+
+  <h3>Command line</h3>
+  <p><a href="http://shelldevel.net/">ShellDevel</a></p>
+  <p><a href="https://vimeo.com/84183973">Craft your own IDE in the shell - Wynn Netherland</a></p>
+</section>
+
+<section>
+  <h2>Resources</h2>
+
+  <h3>Git</h3>
+  <p><a href="http://gitready.com/">Git Ready</a></p>
+  <p><a href="http://pcottle.github.io/learnGitBranching/">Learn Git branching</a></p>
+  <p><a href="https://try.github.io/levels/1/challenges/1">Got 15 minutes and want to learn Git?</a></p>
+  <p><a href="https://github.com/andrewmriley/drupal-site-precommit">Git precommit hooks</a></p>
+</section>
+
+<section>
+  <h2>Resources</h2>
+
+  <h3>Vim</h3>
+  <p><a href="http://vimcasts.org/">Vim Casts</a></p>
+  <p><a href="https://mikecoutermarsh.com/boston-vim-learning-vim-in-a-week/">Boston Vim: Learning Vim in a Week</a></p>
+  <p><a href="https://www.youtube.com/watch?v=3TX3kV3TICU">Let Vim Do the Typing</a>
+  <p><a href="http://vim-adventures.com/">Vim adventures</a></p>
+  <p><a href="http://www.vimgolf.com/">VimGolf</a></p>
+</section>
+
+<section>
+  <h2>Resources</h2>
+
+  <h3>Tmux</h3>
+  <p><a href="https://upcase.com/tmux">Tmux - Upcase - Paid but very good.</a></p>
+  <p><a href="https://robots.thoughtbot.com/a-tmux-crash-course">A tmux Crash Course</a></p>
+</section>
+
+<section>
+  <h2>Thank You!</h2>
+
 </section>
 </div>
 </div>
@@ -133,8 +590,8 @@
 				progress: true,
 				history: true,
 				center: true,
-
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+        fragments: true,
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
 
 				// Optional reveal.js plugins
 				dependencies: [

@@ -31,10 +31,23 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
+  padding-bottom: 2%;
   color: #d09215;
   line-height: 0.9em;
   letter-spacing: -0.025em;
   font-weight: 600; }
+
+.reveal h1 {
+  font-size: 275%; }
+
+.reveal h2 {
+  font-size: 225%; }
+
+.reveal h3 {
+  font-size: 150%; }
+
+.reveal p {
+  padding-bottom: 2%; }
 
 /*********************************************
  * CALLOUT TEXT
@@ -127,7 +140,14 @@ body {
   display: block;
   padding: 0.5em;
   background: #1a2526;
-  max-height: none; }
+  max-height: none;
+  text-align: left; }
+
+/*********************************************
+ * Data states
+ ********************************************/
+.background .header {
+  display: none; }
 
 /*********************************************
  * AD HOC CUSTOM CLASSES (Originally by Larry)

@@ -48,10 +48,26 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
+  padding-bottom: 2%;
   color: $orange;
   line-height: 0.9em;
   letter-spacing: -0.025em;
   font-weight: 600;
+}
+
+.reveal {
+  h1 {
+    font-size: 275%;
+  }
+  h2 {
+    font-size: 225%;
+  }
+  h3 {
+    font-size: 150%;
+  }
+  p {
+    padding-bottom: 2%;
+  }
 }
 
 /*********************************************
@@ -149,7 +165,15 @@ body {
   display: block; padding: 0.5em;
   background: $black;
   max-height: none;
+  text-align: left;
 }
+
+/*********************************************
+ * Data states
+ ********************************************/
+ .background .header {
+  display: none;
+ }
 
 /*********************************************
  * AD HOC CUSTOM CLASSES (Originally by Larry)
