@@ -53,14 +53,9 @@
   </aside>
 </section>
 
-  <section data-state="background" data-background="assets/demo.gif" data-background-size="90%" data-background-color="#003954">
-  </section>
-
 <section>
   <h1>What is the Shell?</h1>
-  <p>
-    <blockquote class="fragment">"A shell is a user interface for access to an operating system's services."</blockquote>
-  </p>
+    <p class="fragment">A shell is a user interface for access to an operating system's services.</p>
 </section>
 
 <section>
@@ -123,15 +118,6 @@
 </section>
 
 <section>
-  <h3>Customization / Personalization</h3>
-  <p>Make your computer work in the way you want it to.</p>
-</section>
-
-<section>
- INSERT DEMO OF BOB'S AWESOME SETUP HERE
-</section>
-
-<section>
   <h3>Bob Kepford</h3>
   <p>Publisher</p>
   <p> <a href="http://theweeklydrop.com">TheWeeklyDrop.com</a></p>
@@ -140,8 +126,14 @@
 </section>
 
 <section>
+  <h3>Customization / Personalization</h3>
+  <p>Make your computer work in the way you want it to.</p>
+</section>
+
+
+<section>
   <section>
-    <h3>.dot files. Portability</h3>
+    <h3>.dot files</h3>
     <p class="fragment">Configuration files.</p>
     <p class="fragment">Begin with a .</p>
     <p class="fragment">Live in ~</p>
@@ -223,6 +215,7 @@
 </section>
 <section>
   <h2>SSH</h2>
+   <p>Secure Socket Shell</p>
 </section>
 
 <section>
@@ -246,14 +239,23 @@
     <p class="fragment">Don't use a GUI</p>
     <p class="fragment">Learn to use the commands</p>
   </section>
+
   <section>
     <h2>Git config</h2>
     <p class="fragment">vim ~/.gitconfig</p>
      <img src="assets/git_config.png" class="fragment" alt="" width="" height="" border="0" />
   </section>
+
   <section>
     <h2>Git aliases</h2>
    <img src="assets/git-aliases.png" alt="" width="100%" height="" border="0" />
+   <aside class="notes">
+     - git log
+     - git lol ##graph
+     - git ll adds numstat, number of lines changed
+     - git lola same as lol but all branches
+     - git lolm just my commit
+  </aside>
   </section>
 
   <section data-state="background" data-background-video="videos/git-aliases.mp4" data-background-video-loop data-background-color="#003954">
@@ -268,6 +270,10 @@
 
   <section>
     <h2>Git Hooks</h2>
+     <pre><code>
+     .git/hooks
+     </pre></code>
+     <p><a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">Customizing Git - Git Hooks</a></p>
   </section>
 
   <section>
@@ -292,7 +298,7 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
   </section>
 
   <section>
-     <p class="fragment fade-out">But I forget to add those to my repo</p>
+     <h3 class="fragment fade-out">But I forget to add those to my repo</h3>
     <h2 class="fragment">.git_template</h2>
      <p class="fragment">In your ~/.gitconfig</p>
     <pre class="fragment"><code>
@@ -310,7 +316,8 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
   </section>
 
   <section>
-    <h2>Tig</h2>
+    <h2><a href="http://jonas.nitro.dk/tig/">Tig</a></h2>
+     <p>Text-mode interface for git http://jonas.nitro.dk/tig/</p>
   </section>
 
   <section data-state="background" data-background-video="videos/tig.mp4" data-background-video-loop data-background-color="#003954">
@@ -331,17 +338,15 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
 <section>
   <section>
     <h2>Vim</h2>
-  </section>
-
-  <section>
-    <h2>Why Vim?</h2>
+     <img src="assets/iamdevloper.png" class="fragment" alt="" width="" height="" border="0" />
   </section>
 
   <section  data-state="background" data-background="assets/carey-typing.gif" data-background-size="95%" >
   </section>
 
   <section>
-          <p>I plan on coding for many years.</p>
+    <h2>Why Vim?</h2>
+    <p class="fragment">I plan on coding for many years.</p>
     <aside class="notes">
       RSA
     </aside>
@@ -349,12 +354,13 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
 
   <section>
     <h2>My editor history</h2>
-    <p>Netbeans</p>
-    <p>Smultron</p>
-    <p>BBEdit</p>
-    <p>Textmate</p>
-    <p>SublimeText 2</p>
-    <p>PHPStorm</p>
+    <p class="fragment">Netbeans</p>
+    <p class="fragment">Smultron</p>
+    <p class="fragment">BBEdit</p>
+    <p class="fragment">Coda</p>
+    <p class="fragment">Textmate</p>
+    <p class="fragment">SublimeText 2</p>
+    <p class="fragment">PHPStorm</p>
   </section>
 
   <section>
@@ -528,10 +534,6 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
   </section>
 
   <section data-state="background" data-background-video="videos/tmux-panes.mp4" data-background-video-loop data-background-color="#003954">
-  </section>
-
-  <section>
-      <h3>Customization (.tmux.conf)</h3>
   </section>
 
   <section>
