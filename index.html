@@ -53,10 +53,13 @@
   </aside>
 </section>
 
+  <section data-state="background" data-background="assets/demo.gif" data-background-size="90%" data-background-color="#003954">
+  </section>
+
 <section>
   <h1>What is the Shell?</h1>
   <p>
-    <blockqoute class="fragment">"A shell is a user interface for access to an operating system's services."</blockqoute>
+    <blockquote class="fragment">"A shell is a user interface for access to an operating system's services."</blockquote>
   </p>
 </section>
 
@@ -96,7 +99,7 @@
 </section>
 
 <section>
- <blockqoute>"I have never regretted learning to use a command line tool."</blockqoute>
+ <blockquote>"I have never regretted learning to use a command line tool."</blockquote>
  <p> <br />~ Me</p>
 </section>
 
@@ -193,9 +196,11 @@
       <p>Shortcuts to commands.</p>
       <pre>
         <code>
-        alias l='ls -lhGt'  # -l long listing, most recent first
-        alias la="ls -A -l -G"
-        alias c='clear'
+          alias a='ls -A'
+          alias la="ls -A -l -G"
+          alias c='clear'
+          alias l.='ls -d .[^.]*'
+          alias l='ls -lhGt'
         </code>
       </pre>
 </section>
@@ -333,13 +338,13 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
   </section>
 
   <section  data-state="background" data-background="assets/carey-typing.gif" data-background-size="95%" >
-    <aside class="notes">
-      RSA
-    </aside>
   </section>
 
   <section>
-          I plan on coding for many years.
+          <p>I plan on coding for many years.</p>
+    <aside class="notes">
+      RSA
+    </aside>
   </section>
 
   <section>
@@ -353,23 +358,22 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
   </section>
 
   <section>
-          I plan on coding for many years.
+          <p>I plan on coding for many years.</p>
     <aside class="notes">
-      I plan on coding for many years.
       Investment
     </aside>
   </section>
 
   <section>
     <h2>Tips:</h2>
-    Visual block
+    <p>Visual block</p>
   </section>
 
   <section  data-state="background" data-background-video="videos/vim-visual-block.mp4" data-background-video-loop data-background-color="#003954">
   </section>
 
   <section>
-    Jump to class declaration
+    <h2>Jump to class declaration</h2>
   </section>
 
   <section  data-state="background" data-background-video="videos/vim-ctags.mp4" data-background-video-loop data-background-color="#003954">
@@ -405,11 +409,14 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
     <h2>Gitgutter - Git</h2>
   </section>
 
-  <section  data-state="background" data-background-video="videos/vim-gitgutter.mp4" data-background-video-loop data-background-color="#003954">
+  <section data-state="background" data-background-video="videos/vim-gitgutter.mp4" data-background-video-loop data-background-color="#003954">
   </section>
 
   <section>
     <h2>Vdebug - Debugging</h2>
+  </section>
+
+  <section data-state="background" data-background="assets/vdebug.gif" data-background-video-loop data-background-color="#003954">
   </section>
 
   <section>
@@ -451,13 +458,11 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
 <section>
   <section>
     <h2>Drush</h2>
-      <h3>Basic uses</h3>
       <p class="fragment">Download and enable modules</p>
       <p class="fragment"> Backup and import databases</p>
       <p class="fragment">Run updates</p>
-      <p class="fragment">drush ws --tail</p>
-      <p class="fragment">Log in as a user</p>
-      <p class="fragment">registry rebuild</p>
+      <p class="fragment">Watch logs</p>
+      <p class="fragment">Log in as any user</p>
   </section>
 
 
@@ -508,12 +513,21 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
       <h3>Sessions</h3>
   </section>
 
+  <section data-state="background" data-background-video="videos/tmux-session.mp4" data-background-video-loop data-background-color="#003954">
+  </section>
+
   <section>
       <h3>Windows</h3>
   </section>
 
+  <section data-state="background" data-background-video="videos/tmux-windows.mp4" data-background-video-loop data-background-color="#003954">
+  </section>
+
   <section>
       <h3>Panes</h3>
+  </section>
+
+  <section data-state="background" data-background-video="videos/tmux-panes.mp4" data-background-video-loop data-background-color="#003954">
   </section>
 
   <section>
