@@ -119,13 +119,24 @@
 
 <section>
   <h3>Bob Kepford</h3>
-  <p>Publisher</p>
-  <p> <a href="http://theweeklydrop.com">TheWeeklyDrop.com</a></p>
   <p>Lead Architect</p>
   <p><a href="http://mediacurrent.com">Mediacurrent.com</a></p>
+  <p>Publisher</p>
+  <p> <a href="http://theweeklydrop.com">TheWeeklyDrop.com</a></p>
+     <aside class="notes">
+       Time for the awesome demo.
+     </aside>
 </section>
 
   <section data-state="background" data-background-video="videos/demo.mp4" data-background-color="#003954">
+
+     <aside class="notes">
+       <li> Sets up a tmux session with split screens</li>
+       <li> Drush aliases all instances in separate terminal sessions in tmux</li>
+       <li> Starts tailing the watchdog for my local dev instance.</li>
+       <li> Starts Vim</li>
+       <li> Starts Vagrant VM</li>
+    </aside>
   </section>
 
 <section>
@@ -157,7 +168,7 @@
   <section>
    <h2>Symlink</h2>
         <p>A Symbolic link is any file that contains a reference to another file or directory in the form of an absolute or relative path.</p>
-        <pre><code>ln -s source_file target_file</code></pre>
+        <pre><code>ln -s ~/source_file ~/bin/dotfiles/target_file</code></pre>
   </section>
 
   <section>
@@ -245,23 +256,24 @@
 
   <section>
     <h2>Git config</h2>
-    <p class="fragment">vim ~/.gitconfig</p>
+    <p>~/.gitconfig</p>
      <img src="assets/git_config.png" class="fragment" alt="" width="" height="" border="0" />
   </section>
 
   <section>
     <h2>Git aliases</h2>
    <img src="assets/git-aliases.png" alt="" width="100%" height="" border="0" />
-   <aside class="notes">
-     - git log
-     - git lol ##graph
-     - git ll adds numstat, number of lines changed
-     - git lola same as lol but all branches
-     - git lolm just my commit
-  </aside>
   </section>
 
   <section data-state="background" data-background-video="videos/git-aliases.mp4" data-background-video-loop data-background-color="#003954">
+
+   <aside class="notes">
+     <li> git log</li>
+     <li> git lol ##graph</li>
+     <li> git ll adds numstat, number of lines changed</li>
+     <li> git lola same as lol but all branches</li>
+     <li> git lolm just my commit</li>
+  </aside>
   </section>
 
   <section>
@@ -560,7 +572,7 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
   </section>
 
   <section>
-      <h3>Using Drush aliases with tmux</h3>
+      <h3>Demo</h3>
   </section>
 </section>
 
