@@ -47,18 +47,28 @@
    <p>Command line for the Drupaler</p>
 
   <aside class="notes">
-    Ask how many command line experts we have. How many of you don't spend much time in the command line.
+    <ul>
+    <li>There are two types of developers.</li>
+    <li>Ones that prefer the command line,s.</li>
+    <li>and ones that do it wrong... I'm kidding.</li>
+    </ul>
   </aside>
 </section>
 
 <section>
   <h1>What is the Shell?</h1>
     <p class="fragment">A shell is a user interface for access to an operating system's services.</p>
+    <aside class="notes">
+      A shell is a user interface for access to an operating system's services.
+    </aside>
 </section>
 
 <section>
   <h2>CLI (command-line interface)</h2>
       <p>Text command lines</p>
+    <aside class="notes">
+      Text command lines.
+    </aside>
 </section>
 
 <section>
@@ -68,32 +78,53 @@
     <p class="fragment">Concise</p>
     <p class="fragment">Scriptable for Automation</p>
   </ul>
+    <aside class="notes">
+    <ul>
+      <li>Light on Resources</li>
+      <li>Concise</li>
+      <li>Scriptable for Automation</li>
+    </ul>
+    </aside>
 </section>
 
 <section>
     <h2>Weaknesses of the CLI</h2>
       <p class="fragment">Commands are not obvious</p>
       <p class="fragment">Not beginner friendly</p>
+    <aside class="notes">
+      <ul>
+        <li>Commands are not obvious</li>
+        <li>Not beginner friendly</li>
+      </ul>
+    </aside>
 </section>
 
 <section>
   <h2>Why you should learn to use the Shell</h2>
+    <aside class="notes">
+    </aside>
 </section>
 
 <section>
     <img src="assets/unix-system.gif" width="100%" />
+    <aside class="notes">
+      <p>It's a Unix system!</p>
+    </aside>
 </section>
 
 <section>
     <h3>67.8% to 98.3% of the Servers on the Net are using Unix or Unix like systems<h3>
-        <aside class="notes">
-          Unix systems have won. You will never regret learning Unix tools.
-        </aside>
+    <aside class="notes">
+      Unix systems have won.
+    </aside>
 </section>
 
 <section>
  <blockquote>"I have never regretted learning to use a command line tool."</blockquote>
  <p> <br />~ Me</p>
+    <aside class="notes">
+      I have never regretted learning to use a command line tool.
+    </aside>
 </section>
 
 <section>
@@ -106,7 +137,7 @@
     <p>Sass</p>
     <aside class="notes">
       The aren't going away. GUI's are great but CLI's make the world tick. Programming languages have them Popular web services like Github have them. And your computer has them
-    <aside>
+    </aside>
 </section>
 <section>
   <h3>Scripts / Automation</h3>
@@ -140,8 +171,10 @@
 <section>
   <h3>Customization / Personalization</h3>
   <p>Make your computer work in the way you want it to.</p>
+    <aside class="notes">
+      Make your computer work in the way you want it to.
+    </aside>
 </section>
-
 
 <section>
   <section>
@@ -150,7 +183,9 @@
     <p class="fragment">Begin with a .</p>
     <p class="fragment">Live in ~</p>
     <aside class="notes">
-    Dot files are files that begin with a . and are therefore invisible to file browsers on most systems.
+      Think of these as your preferences.
+      Dot files are files that begin with a period
+      invisible to file browsers on most systems.
     </aside>
   </section>
 
@@ -161,91 +196,111 @@
     <p class="fragment">You can take your customizations with you.</p>
     <p class="fragment">Look at other dotfiles and steal liberally</p>
     <p class="fragment">Add small bits at a time and learn how to use them</p>
+    <aside class="notes">
+    </aside>
   </section>
 
   <section>
    <h2>Symlink</h2>
         <p>A Symbolic link is any file that contains a reference to another file or directory in the form of an absolute or relative path.</p>
         <pre><code>ln -s ~/source_file ~/bin/dotfiles/target_file</code></pre>
+    <aside class="notes">
+    </aside>
   </section>
 
   <section>
     <h3>What do you put in your dotfiles repo?</h3>
+    <aside class="notes">
+    </aside>
   </section>
 </section>
 
 <section>
-  <h3>The Shell</h3>
-  <p class="fragment"> <a href="https://www.gnu.org/software/bash/">Bash</a>:
-  <br />the GNU Project's shell and is what I use.</p>
-  <p class="fragment"> <a href="http://www.zsh.org/">ZSH</a>:
-  <br /> a shell designed for interactive use, although it is also a powerful scripting language</p>
-  <p class="fragment"> <a href="https://fishshell.com/">Fish</a>:
-   <br />a smart and user-friendly command line shell for OS X, Linux, and the rest of the family.</p>
-  <aside class="notes">
-    I use BASH but there are other great and more powerful and fancy shells like ZSH and Fish.
-  </aside>
-</section>
+  <section>
+    <h3>The Shell</h3>
+    <p class="fragment"> <a href="https://www.gnu.org/software/bash/">Bash</a>:
+    <br />the GNU Project's shell and is what I use.</p>
+    <p class="fragment"> <a href="http://www.zsh.org/">ZSH</a>:
+    <br /> a shell designed for interactive use, although it is also a powerful scripting language</p>
+    <p class="fragment"> <a href="https://fishshell.com/">Fish</a>:
+     <br />a smart and user-friendly command line shell for OS X, Linux, and the rest of the family.</p>
+    <aside class="notes">
+      I use BASH but there are other great and more powerful and fancy shells like ZSH and Fish.
+    </aside>
+  </section>
 
-<section>
-  <h3>Environment / $PATH</h3>
-  <p>Add things to your path</p>
-  <aside class="notes">
-    PATH is an environment variable on Unix-like operating systems, DOS, OS/2, and Microsoft Windows, specifying a set of directories where executable programs are located. https://en.wikipedia.org/wiki/PATH_(variable)
-  </aside>
-</section>
+  <section>
+    <h3>Environment / $PATH</h3>
+    <p>Add things to your path</p>
+    <aside class="notes">
+      PATH is an environment variable on Unix-like operating systems, DOS, OS/2, and Microsoft Windows, specifying a set of directories where executable programs are located. https://en.wikipedia.org/wiki/PATH_(variable)
+    </aside>
+  </section>
 
-<section>
-    <h3>Alias</h3>
-      <p>Shortcuts to commands.</p>
-      <pre>
+  <section>
+      <h3>Alias</h3>
+        <p>Shortcuts to commands.</p>
+        <pre>
+          <code>
+            alias a='ls -A'
+            alias la="ls -A -l -G"
+            alias c='clear'
+            alias l.='ls -d .[^.]*'
+            alias l='ls -lhGt'
+          </code>
+        </pre>
+    <aside class="notes">
+    </aside>
+  </section>
+
+  <section data-state="background" data-background-video="videos/aliases.mp4" data-background-video-loop data-background-color="#003954">
+  </section>
+  <section>
+        <h3>Functions</h3>
+        <pre>
         <code>
-          alias a='ls -A'
-          alias la="ls -A -l -G"
-          alias c='clear'
-          alias l.='ls -d .[^.]*'
-          alias l='ls -lhGt'
+          function take() {
+              mkdir -p "$1"
+              cd "$1"
+          }
         </code>
-      </pre>
-</section>
+        </pre>
+    <aside class="notes">
+    </aside>
+  </section>
 
-<section data-state="background" data-background-video="videos/aliases.mp4" data-background-video-loop data-background-color="#003954">
-</section>
-<section>
-      <h3>Functions</h3>
-      <pre>
-      <code>
-        function take() {
-            mkdir -p "$1"
-            cd "$1"
-        }
-      </code>
-      </pre>
-</section>
-
-<section data-state="background" data-background-video="videos/take.mp4" data-background-video-loop data-background-color="#003954">
-</section>
-<section>
-  <h2>SSH</h2>
-   <p>Secure Socket Shell</p>
+  <section data-state="background" data-background-video="videos/take.mp4" data-background-video-loop data-background-color="#003954">
+    <aside class="notes">
+    </aside>
+  </section>
 </section>
 
 <section>
-  <h3>~/.ssh/config</h3>
-  <p>Save yourself from trying to remember IP addresses and port numbers</p>
-    <img src="assets/ssh_config.png" alt="" width="" height="" border="0" />
+  <section>
+    <h2>SSH</h2>
+     <p>Secure Socket Shell</p>
+    <aside class="notes">
+    </aside>
+  </section>
+
+  <section>
+    <h3>~/.ssh/config</h3>
+    <p>Save yourself from trying to remember IP addresses and port numbers</p>
+      <img src="assets/ssh_config.png" alt="" width="" height="" border="0" />
+    <aside class="notes">
+    </aside>
+  </section>
+
+  <section>
+    <h3>Privacy and Security</h3>
+    <p>Don't put sensitive info in your Git repo if you plan to make it public.</p>
+    <aside class="notes">
+      <p>Include this info in files outside the repo.</p>
+    </aside>
+  </section>
 </section>
 
 <section>
-  <h3>Privacy and Security</h3>
-  <p>Don't put sensitive info in your Git repo if you plan to make it public.</p>
-  <aside class="notes">
-  <p>Include this info in files outside the repo.</p>
-</aside>
-</section>
-
-<section>
-
   <section>
     <h2>Git</h2>
     <p class="fragment">Don't use a GUI</p>
@@ -341,8 +396,8 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
      <img src="assets/git-radar-file-status.png" alt="" width="" height="" border="0" />
     <p class="fragment">A more basic tool, <a href="https://github.com/djl/vcprompt">vcprompt</a>.</p>
   </section>
-
 </section>
+
 <section>
   <section>
     <h2>Vim</h2>
@@ -366,8 +421,8 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
 
   <section>
     <h2>Can Vim do ____?</h2>
-    <p class="fragment">Yes!</p>
-    <p class="fragment">Vim is infinitely customizable</p>
+    <h2 class="fragment">Yes!</h2>
+    <aside class="notes">Vim is infinitely customizable</aside>
   </section>
 
   <section>
@@ -384,7 +439,6 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
     <p><a href="https://github.com/VundleVim/Vundle.vim">Vundle - Plugin management</a></p>
     </ul>
   </section>
-
 </section>
 
 <section>
@@ -415,37 +469,19 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
   <section>
     <h2>Drupal Watchdog Log</h2>
     <pre><code>drush ws --tail</code></pre>
-
   </section>
 
   <section data-state="background" data-background-video="videos/drush-ws-tail.mp4" data-background-video-loop data-background-color="#003954">
   </section>
-
 </section>
 
 <section>
   <section>
-    <h2>Drupal Console</h2>
+    <h2><a href="https://drupalconsole.com/">Drupal Console</a></h2>
+      <p class="fragment">The new CLI for Drupal. A tool to generate boilerplate code, interact with and debug Drupal.</p>
   </section>
 
-  <section>
-      <h3>Install Drupal</h3>
-      @TODO Add Gif
-  </section>
-
-  <section>
-      <h3>Generate content</h3>
-      @TODO Add Gif
-  </section>
-
-  <section>
-      <h3>Build modules</h3>
-      @TODO Add Gif
-  </section>
-
-  <section>
-      <h3>Manage site</h3>
-          @TODO Add Gif
+  <section data-state="background" data-background-video="videos/drupal-console-chain.mp4" data-background-video-loop data-background-color="#003954">
   </section>
 </section>
 
@@ -466,10 +502,9 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
   </section>
 
   <section>
-    <h2>Tmux</h2>
-    <p class="fragment">Sessions</li>
-    <p class="fragment">Windows</li>
-    <p class="fragment">Panes</li>
+    <h2 class="fragment">Sessions</h2>
+    <h2 class="fragment">Windows</h2>
+    <h2 class="fragment">Panes</h2>
   </section>
 
   <section>
