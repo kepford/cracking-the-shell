@@ -49,7 +49,7 @@
   <aside class="notes">
     <ul>
     <li>There are two types of developers.</li>
-    <li>Ones that prefer the command line,s.</li>
+    <li>Ones that prefer the command lines.</li>
     <li>and ones that do it wrong... I'm kidding.</li>
     </ul>
   </aside>
@@ -157,22 +157,22 @@
      </aside>
 </section>
 
-  <section data-state="background" data-background-video="video/demo.mp4" data-background-color="#003954">
-
-     <aside class="notes">
-       <li> Sets up a tmux session with split screens</li>
-       <li> Drush aliases all instances in separate terminal sessions in tmux</li>
-       <li> Starts tailing the watchdog for my local dev instance.</li>
-       <li> Starts Vim</li>
-       <li> Starts Vagrant VM</li>
-    </aside>
-  </section>
-
 <section>
   <h3>Customization / Personalization</h3>
   <p>Make your computer work in the way you want it to.</p>
     <aside class="notes">
       Make your computer work in the way you want it to.
+    </aside>
+</section>
+
+<section data-state="background" data-background-video="videos/demo.mp4" data-background-video-loop data-background-color="#003954">
+     <aside class="notes">
+       <li> Sets up a tmux session multiple widows and split screens</li>
+       <li>Sets up drush alias with drush use.</li>
+       <li> Drupal Console in it's own pane</li>
+       <li> Drush aliases all instances in separate terminal sessions</li>
+       <li> Starts tailing the watchdog for my local dev instance.</li>
+       <li> Starts Vim</li>
     </aside>
 </section>
 
@@ -243,17 +243,33 @@
         <pre>
           <code>
             alias a='ls -A'
-            alias la="ls -A -l -G"
+            alias la='ls -A -l -G'
             alias c='clear'
             alias l.='ls -d .[^.]*'
             alias l='ls -lhGt'
           </code>
         </pre>
     <aside class="notes">
+      <ul>
+        <li>a: all except literal .</li>
+        <li>la: List all files long format</li>
+        <li>c: Clears the screen</li>
+        <li>l.: List only dot files</li>
+        <li>l: List files in long human format with time</li>
+      </ul>
     </aside>
   </section>
 
   <section data-state="background" data-background-video="videos/aliases.mp4" data-background-video-loop data-background-color="#003954">
+    <aside class="notes">
+      <ul>
+        <li>a: all except literal .</li>
+        <li>la: List all files long format</li>
+        <li>c: Clears the screen</li>
+        <li>l.: List only dot files</li>
+        <li>l: List files in long human format with time</li>
+      </ul>
+    </aside>
   </section>
   <section>
         <h3>Functions</h3>
@@ -311,6 +327,12 @@
     <h2>Git config</h2>
     <p>~/.gitconfig</p>
      <img src="assets/git_config.png" class="fragment" alt="" width="" height="" border="0" />
+    <aside class="notes">
+      <p>
+	excludesfile = ~/.gitignore
+  Set colors for Git.
+      </p>
+    </aside>
   </section>
 
   <section>
@@ -367,7 +389,7 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
 
   <section>
     <h3 class="fragment fade-out">But I forget to add those to my repo</h3>
-    <h2 class="fragment">.git_template</h2>
+    <h2 class="fragment fade-in">.git_template</h2>
     <p class="fragment">In your ~/.gitconfig</p>
     <pre class="fragment"><code>
   [alias]
@@ -439,6 +461,51 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
     <p><a href="https://github.com/VundleVim/Vundle.vim">Vundle - Plugin management</a></p>
     </ul>
   </section>
+    <section>
+    <h2>Nerdtree - File management</h2>
+  </section>
+
+  <section data-state="background"  data-background-video="videos/vim-nerdtree.mp4" data-background-video-loop data-background-color="#003954">
+  </section>
+
+  <section>
+    <h2> <a href="https://github.com/ctrlpvim/ctrlp.vim">ctrlP.vim</a></h2>
+    Fuzzy file, buffer, mru, tag, etc finder.
+  </section>
+
+  <section  data-state="background" data-background-video="videos/vim-ctrlp.mp4" data-background-video-loop data-background-color="#003954">
+  </section>
+  <section>
+    <h2>Vim Fugitive - Git</h2>
+     <p>A Git wrapper so awesome, it should be illegal.</p>
+  </section>
+
+  <section  data-state="background" data-background-video="videos/vim-fugitive.mp4" data-background-video-loop data-background-color="#003954">
+  </section>
+
+  <section>
+    <h2>Gitgutter - Git</h2>
+  </section>
+
+  <section data-state="background" data-background-video="videos/vim-gitgutter.mp4" data-background-video-loop data-background-color="#003954">
+  </section>
+
+  <section>
+    <h2>Vdebug - Debugging</h2>
+  </section>
+
+  <section data-state="background" data-background="assets/vdebug.gif" data-background-video-loop data-background-color="#003954">
+  </section>
+
+  <section>
+    <h2><a href="https://www.drupal.org/project/vimrc
+">Vim Plugin For Drupal</a></h2>
+    drupal.org/project/vimrc
+  </section>
+
+  <section  data-state="background" data-background-video="videos/vim-drupalvimrc.mp4" data-background-video-loop data-background-color="#003954">
+  </section>
+
 </section>
 
 <section>
@@ -482,6 +549,23 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
   </section>
 
   <section data-state="background" data-background-video="videos/drupal-console-chain.mp4" data-background-video-loop data-background-color="#003954">
+    <aside class="notes">
+      <p>Download, install, and run Drupal</p>
+    </aside>
+
+  </section>
+
+  <section>
+      <p>Debug routes.</p>
+      <p>Build modules, themes, plugins and more.</p>
+      <p>Generate content.</p>
+      <p>Much more.</p>
+      <aside class="notes">
+        <p>Debug routes.</p>
+        <p>Build modules, themes, plugins and more.</p>
+        <p>Generate content.</p>
+        <p>Much more.</p>
+        </aside>
   </section>
 </section>
 
@@ -499,6 +583,12 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
     <p class="fragment">Detach and attach to terminal sessions without loosing state.</p>
     <p class="fragment">Isolate your terminal sessions.</p>
     <p class="fragment">Script terminal session layout based on project needs.</p>
+    <aside class="notes">
+    <p>Detach and attach to terminal sessions without loosing state.</p>
+    <p>Isolate your terminal sessions.</p>
+    <p>Script terminal session layout based on project needs.</p>
+    <p>Allows me to quickly switch between projects</p>
+    </aside>
   </section>
 
   <section>
@@ -509,6 +599,17 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
 
   <section>
       <h2>Sessions</h2>
+          <aside class="notes">
+            <p>
+            Create multiple session
+            </p>
+            <p>
+            Detatch and reattach
+            </p>
+            <p>
+            Switch sessions quickly
+            </p>
+          </aside>
   </section>
 
   <section data-state="background" data-background-video="videos/tmux-session.mp4" data-background-video-loop data-background-color="#003954">
@@ -519,6 +620,10 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
   </section>
 
   <section data-state="background" data-background-video="videos/tmux-windows.mp4" data-background-video-loop data-background-color="#003954">
+    <aside class="notes">
+    <p>Widows are kind of like tabs.</p>
+    <p>Create, delete, rename and move them</p>
+    </aside>
   </section>
 
   <section>
@@ -526,6 +631,9 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
   </section>
 
   <section data-state="background" data-background-video="videos/tmux-panes.mp4" data-background-video-loop data-background-color="#003954">
+    <aside class="notes">
+      Divides the window vertically or horizontal. Resize and move panes
+    </aside>
   </section>
 
   <section>
@@ -541,10 +649,6 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
   </section>
 
   <section data-state="background" data-background-video="videos/tmuxinator-project.mp4" data-background-video-loop data-background-color="#003954">
-  </section>
-
-  <section>
-        <h3>Projects</h3>
   </section>
 
   <section>
@@ -612,7 +716,6 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
 				center: true,
         fragments: true,
         transition: 'slide', // none/fade/slide/convex/concave/zoom
-
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
