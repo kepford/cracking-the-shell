@@ -47,8 +47,7 @@
    <p>Command line for the Drupaler</p>
 
   <aside class="notes">
-   <p>Thank you all for sticking around to the end</p>
-   <p>I'd like to thank your HR departments for booking late flights for you all.</p>
+    I can't think of many places I'd rather be Feburary than San Diego.
   </aside>
 </section>
 
@@ -70,11 +69,9 @@
 
 <section>
   <h2>Strengths of the CLI</h2>
-  <ul>
     <p class="fragment">Light on Resources</p>
     <p class="fragment">Concise</p>
     <p class="fragment">Scriptable for Automation</p>
-  </ul>
     <aside class="notes">
     <ul>
       <li>Light on Resources</li>
@@ -103,7 +100,7 @@
 </section>
 
 <section>
-    <img src="assets/unix-system.gif" width="100%" />
+    <img src="assets/unix-system.gif" alt="It's a Unix system" width="100%" />
     <aside class="notes">
       <p>It's a Unix system!</p>
     </aside>
@@ -127,19 +124,35 @@
 <section>
     <h2>CLI's are everywhere</h2>
     <p>PHP</p>
-    <p>Github</p>
     <p>MySQL</p>
     <p>Drupal</p>
-    <p>Grunt</p>
+    <p>Composer</p>
+    <p>Node</p>
     <p>Sass</p>
     <aside class="notes">
       The aren't going away. GUI's are great but CLI's make the world tick. Programming languages have them Popular web services like Github have them. And your computer has them
     </aside>
 </section>
+
+<section>
+  <img src="assets/thingsgettingserious.gif" alt="This is getting serious" width="100%" />
+    <aside class="notes">
+      The aren't going away. GUI's are great but CLI's make the world tick. Programming languages have them Popular web services like Github have them. And your computer has them
+    </aside>
+</section>
+
 <section>
   <h3>Scripts / Automation</h3>
      <aside class="notes">
       You're a developer. You can save time and automate the mundane by writing scripts that execute the commands you learn.
+    </aside>
+</section>
+
+<section>
+  <h3>Customization / Personalization</h3>
+  <p>Make your computer work in the way you want it to.</p>
+    <aside class="notes">
+      Make your computer work in the way you want it to.
     </aside>
 </section>
 
@@ -154,14 +167,6 @@
      <aside class="notes">
        Time for the awesome demo.
      </aside>
-</section>
-
-<section>
-  <h3>Customization / Personalization</h3>
-  <p>Make your computer work in the way you want it to.</p>
-    <aside class="notes">
-      Make your computer work in the way you want it to.
-    </aside>
 </section>
 
 <section data-state="background" data-background-video="videos/demo.mp4" data-background-video-loop data-background-color="#003954">
@@ -233,15 +238,13 @@
     <p>Add things to your path</p>
     <pre><code>
     export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/git/bin:/opt/local/bin
-
     </code></pre>
     <br />
     <pre><code>
 # Type
     $ someapp
-
 # Instead of
-    $ /some/dir/drush/someapp.php
+    $ ~/some/dir/drush/someapp.php
     </code></pre>
     <aside class="notes">
       PATH is an environment variable on Unix-like operating systems, DOS, OS/2, and Microsoft Windows, specifying a set of directories where executable programs are located. https://en.wikipedia.org/wiki/PATH_(variable)
@@ -253,11 +256,9 @@
         <p>Shortcuts to commands.</p>
         <pre>
           <code>
-            alias a='ls -A'
-            alias la='ls -A -l -G'
-            alias c='clear'
-            alias l.='ls -d .[^.]*'
-            alias l='ls -lhGt'
+            alias h='history'
+            alias l='ls -lhGt'  # -l long listing, most recent first -G color
+            alias g='git status'
           </code>
         </pre>
     <aside class="notes">
@@ -271,7 +272,7 @@
     </aside>
   </section>
 
-  <section data-state="background" data-background-video="videos/aliases.mp4" data-background-video-loop data-background-color="#003954">
+  <section data-state="background" data-background-video="videos/bash-aliases.mp4" data-background-video-loop data-background-color="#003954">
     <aside class="notes">
       <ul>
         <li>a: all except literal .</li>
@@ -313,7 +314,18 @@
   <section>
     <h3>~/.ssh/config</h3>
     <p>Save yourself from trying to remember IP addresses and port numbers</p>
-      <img src="assets/ssh_config.png" alt="" width="" height="" border="0" />
+    <pre>
+      <code>
+      Host server1
+          HostName    192.168.68.122
+          User        napolean
+          Port        22
+      Host server2
+          HostName    192.168.68.123
+          User        kip
+          Port        22
+      </code>
+    </pre>
     <aside class="notes">
     </aside>
   </section>
@@ -462,7 +474,6 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
   <section>
     <h3>Plugins</h3>
     <ul>
-    <p><a href="https://github.com/scrooloose/nerdtree">NerdTree- File management</a></p>
     <p><a href="https://github.com/ctrlpvim/ctrlp.vim">ctrlP.vim</a></p>
     <p><a href="https://github.com/tpope/vim-fugitive">Vim Fugitive - Git</a></p>
     <p><a href="https://github.com/airblade/vim-gitgutter">Gitgutter - Git</a></p>
@@ -472,12 +483,6 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
     <p><a href="https://github.com/vim-airline/vim-airline">Vim Airline</a></p>
     <p><a href="https://github.com/VundleVim/Vundle.vim">Vundle - Plugin management</a></p>
     </ul>
-  </section>
-    <section>
-    <h2>Nerdtree - File management</h2>
-  </section>
-
-  <section data-state="background"  data-background-video="videos/vim-nerdtree.mp4" data-background-video-loop data-background-color="#003954">
   </section>
 
   <section>
@@ -593,6 +598,11 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
 
   <section>
     <h2>Why Tmux</h2>
+
+    <img class="fragment" src="assets/dance-fight-dm3.gif" alt="dance fight" width="100%">
+  </section>
+  <section>
+    <h2>Seriously, Why</h2>
     <p class="fragment">Detach and attach to terminal sessions without loosing state.</p>
     <p class="fragment">Isolate your terminal sessions.</p>
     <p class="fragment">Script terminal session layout based on project needs.</p>
@@ -732,6 +742,8 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
         transition: 'slide', // none/fade/slide/convex/concave/zoom
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
+          { src: 'socket.io/socket.io.js', async: true },
+          { src: 'plugin/notes-server/client.js', async: true },
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
