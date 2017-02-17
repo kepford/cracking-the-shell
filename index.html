@@ -52,6 +52,21 @@
 </section>
 
 <section>
+  <h3>Bob Kepford</h3>
+  <p>Lead Architect</p>
+  <p><a href="http://mediacurrent.com">Mediacurrent.com</a></p>
+  <p>Publisher</p>
+  <p> <a href="http://theweeklydrop.com">TheWeeklyDrop.com</a></p>
+  <p>Podcaster</p>
+  <p> <a href="https://www.mediacurrent.com/dropcast">Mediacurrent Dropcast</a></p>
+     <aside class="notes">
+       Talk about Mediacurrent
+       Talks about TWD
+       Mention Podcast
+     </aside>
+</section>
+
+<section>
   <h1>What is the Shell?</h1>
     <p class="fragment">A shell is a user interface for access to an operating system's services.</p>
     <aside class="notes">
@@ -135,16 +150,10 @@
 </section>
 
 <section>
-  <img src="assets/thingsgettingserious.gif" alt="This is getting serious" width="100%" />
-    <aside class="notes">
-      The aren't going away. GUI's are great but CLI's make the world tick. Programming languages have them Popular web services like Github have them. And your computer has them
-    </aside>
-</section>
-
-<section>
   <h3>Scripts / Automation</h3>
      <aside class="notes">
       You're a developer. You can save time and automate the mundane by writing scripts that execute the commands you learn.
+      Make your computer work in the way you want it to.
     </aside>
 </section>
 
@@ -152,31 +161,26 @@
   <h3>Customization / Personalization</h3>
   <p>Make your computer work in the way you want it to.</p>
     <aside class="notes">
-      Make your computer work in the way you want it to.
-    </aside>
-</section>
-
-<section>
-  <h3>Bob Kepford</h3>
-  <p>Lead Architect</p>
-  <p><a href="http://mediacurrent.com">Mediacurrent.com</a></p>
-  <p>Publisher</p>
-  <p> <a href="http://theweeklydrop.com">TheWeeklyDrop.com</a></p>
-  <p>Podcaster</p>
-  <p> <a href="https://www.mediacurrent.com/dropcast">Mediacurrent Dropcast</a></p>
-     <aside class="notes">
-       Time for the awesome demo.
-     </aside>
-</section>
-
-<section data-state="background" data-background-video="videos/demo.mp4" data-background-video-loop data-background-color="#003954">
-     <aside class="notes">
+      <ul>
        <li> Sets up a tmux session multiple widows and split screens</li>
        <li>Sets up drush alias with drush use.</li>
        <li> Drupal Console in it's own pane</li>
        <li> Drush aliases all instances in separate terminal sessions</li>
        <li> Starts tailing the watchdog for my local dev instance.</li>
        <li> Starts Vim</li>
+      </ul>
+    </aside>
+</section>
+
+<section data-state="background" data-background-video="videos/demo.mp4" data-background-video-loop data-background-color="#003954">
+     <aside class="notes">
+    </aside>
+</section>
+
+<section>
+  <img src="assets/thingsgettingserious.gif" alt="This is getting serious" width="100%" />
+    <aside class="notes">
+      If things get serious, what do we do? We put it in Git!
     </aside>
 </section>
 
@@ -187,9 +191,10 @@
     <p class="fragment">Begin with a .</p>
     <p class="fragment">Live in ~</p>
     <aside class="notes">
-      Think of these as your preferences.
-      Dot files are files that begin with a period
-      invisible to file browsers on most systems.
+      <ul>
+      <li>Think of these as your preferences.</li>
+      <li>Dot files are files that begin with a period</li>
+      <li>invisible to file browsers on most systems.</li>
     </aside>
   </section>
 
@@ -201,20 +206,32 @@
     <p class="fragment">Look at other dotfiles and steal liberally</p>
     <p class="fragment">Add small bits at a time and learn how to use them</p>
     <aside class="notes">
+      <ul>
+        <li>Symlink to a single directory</li>
+        <li>Track in Git</li>
+        <li>You can take your customizations with you.</li>
+        <li>Look at other dotfiles and steal liberally</li>
+        <li>Add small bits at a time and learn how to use them</li>
+      </ul>
     </aside>
   </section>
 
   <section>
-   <h2>Symlink</h2>
-        <p>A Symbolic link is any file that contains a reference to another file or directory in the form of an absolute or relative path.</p>
-        <pre><code>ln -s ~/source_file ~/bin/dotfiles/target_file</code></pre>
+    <h2>Symlink</h2>
+    <p>Pointer to an actual file.</p>
+    <pre><code>ln -s ~/.source_file ~/bin/dotfiles/target_file</code></pre>
     <aside class="notes">
+          <p>A Symbolic link is any file that contains a reference to another file or directory in the form of an absolute or relative path.</p>
     </aside>
   </section>
 
   <section>
     <h3>What do you put in your dotfiles repo?</h3>
     <aside class="notes">
+      <ul>
+        <li>Like my Dentist says, only floss the teeth you want to keep.</li>
+        <li>I put any configuration I care about in it.</li>
+      </ul>
     </aside>
   </section>
 </section>
@@ -253,7 +270,7 @@
 
   <section>
       <h3>Aliases</h3>
-        <p>Shortcuts to commands.</p>
+        <p>Shortcuts for longer more complex commands.</p>
         <pre>
           <code>
             alias h='history'
@@ -272,17 +289,6 @@
     </aside>
   </section>
 
-  <section data-state="background" data-background-video="videos/bash-aliases.mp4" data-background-video-loop data-background-color="#003954">
-    <aside class="notes">
-      <ul>
-        <li>a: all except literal .</li>
-        <li>la: List all files long format</li>
-        <li>c: Clears the screen</li>
-        <li>l.: List only dot files</li>
-        <li>l: List files in long human format with time</li>
-      </ul>
-    </aside>
-  </section>
   <section>
         <h3>Functions</h3>
         <pre>
