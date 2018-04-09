@@ -4,9 +4,9 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Cracking the Shell: Commandline for the Drupaler</title>
+		<title>Cracking the Shell: Command-line for the Drupaler</title>
 
-		<meta name="description" content="Commandline for the Drupaler.">
+		<meta name="description" content="Command-line for the Drupaler.">
 		<meta name="author" content="Bob Kepford">
 
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -44,7 +44,6 @@
    <p>Command line for the Drupaler</p>
 
   <aside class="notes">
-    I can't think of many places I'd rather be Feburary than San Diego.
   </aside>
 </section>
 
@@ -127,7 +126,7 @@
 
 <section>
  <blockquote>"I have never regretted learning to use a command line tool."</blockquote>
- <p> <br />~ Me</p>
+ <p class="fragment"> <br />~ Me</p>
     <aside class="notes">
       I have never regretted learning to use a command line tool.
     </aside>
@@ -141,6 +140,7 @@
     <p>Composer</p>
     <p>Node</p>
     <p>Sass</p>
+    <p>Every JavaScript project</p>
     <aside class="notes">
       The aren't going away. GUI's are great but CLI's make the world tick. Programming languages have them Popular web services like Github have them. And your computer has them
     </aside>
@@ -149,28 +149,26 @@
 <section>
   <h3>Scripts / Automation</h3>
      <aside class="notes">
-      You're a developer. You can save time and automate the mundane by writing scripts that execute the commands you learn.
-      Make your computer work in the way you want it to.
+      We're developers. We can save time and automate the mundane by writing scripts that execute the commands we learn.
+      Make our computers work in the way we want it to.
     </aside>
 </section>
 
 <section>
   <h3>Customization / Personalization</h3>
   <p>Make your computer work in the way you want it to.</p>
-    <aside class="notes">
-      <ul>
-       <li> Sets up a tmux session multiple widows and split screens</li>
-       <li>Sets up drush alias with drush use.</li>
-       <li> Drupal Console in it's own pane</li>
-       <li> Drush aliases all instances in separate terminal sessions</li>
-       <li> Starts tailing the watchdog for my local dev instance.</li>
-       <li> Starts Vim</li>
-      </ul>
-    </aside>
 </section>
 
 <section data-state="background" data-background-video="videos/demo.mp4" data-background-video-loop data-background-color="#003954">
-     <aside class="notes">
+    <aside class="notes">
+      <ul>
+       <li>Sets up a Tmux session multiple widows and split screens</li>
+       <li>Sets up drush alias with drush use.</li>
+       <li>Drupal Console in it's own pane</li>
+       <li>Drush aliases all instances in separate terminal sessions</li>
+       <li>Starts tailing the watchdog for my local dev instance.</li>
+       <li>Starts Vim</li>
+      </ul>
     </aside>
 </section>
 
@@ -223,7 +221,9 @@
   </section>
 
   <section>
-    <h3>What do you put in your dotfiles repo?</h3>
+    <h3>What configuration do we add to our dotfiles repo?</h3>
+    <blockquote class="fragment">Only floss the teeth you want to keep.</blockquote>
+    <p class="fragment">~ My Dentist (Probably stole this line)</p>
     <aside class="notes">
       <ul>
         <li>Like my Dentist says, only floss the teeth you want to keep.</li>
@@ -236,11 +236,11 @@
 <section>
   <section>
     <h3>The Shell</h3>
-    <p class="fragment"> <a href="https://www.gnu.org/software/bash/">Bash</a>:
+    <p class="fragment"> <a href="https://www.gnu.org/software/bash/">Bash - gnu.org/software/bash</a>:
     <br />the GNU Project's shell and is what I use.</p>
-    <p class="fragment"> <a href="http://www.zsh.org/">ZSH</a>:
+    <p class="fragment"> <a href="http://www.zsh.org/">ZSH - zsh.org</a>:
     <br /> a shell designed for interactive use, although it is also a powerful scripting language</p>
-    <p class="fragment"> <a href="https://fishshell.com/">Fish</a>:
+    <p class="fragment"> <a href="https://fishshell.com/">Fish - fishshell.com</a>:
      <br />a smart and user-friendly command line shell for OS X, Linux, and the rest of the family.</p>
     <aside class="notes">
       I use BASH but there are other great and more powerful and fancy shells like ZSH and Fish.
@@ -260,6 +260,7 @@
 # Instead of
     $ ~/some/dir/drush/someapp.php
     </code></pre>
+    <p>[en.wikipedia.org/wiki/PATH_(variable)](https://en.wikipedia.org/wiki/PATH_(variable))</p>
     <aside class="notes">
       PATH is an environment variable on Unix-like operating systems, DOS, OS/2, and Microsoft Windows, specifying a set of directories where executable programs are located. https://en.wikipedia.org/wiki/PATH_(variable)
     </aside>
@@ -337,7 +338,7 @@
     <h3>Privacy and Security</h3>
     <p>Don't put sensitive info in your Git repo if you plan to make it public.</p>
     <aside class="notes">
-      <p>Include this info in files outside the repo.</p>
+      <p>Include this info in files outside the repo or gitignore them.</p>
     </aside>
   </section>
 </section>
@@ -355,8 +356,12 @@
      <img src="assets/git_config.png" class="fragment" alt="" width="" height="" border="0" />
     <aside class="notes">
       <p>
-	excludesfile = ~/.gitignore
-  Set colors for Git.
+      <ul>
+        <li>excludesfile = ~/.gitignore</li>
+        <li>Colors for Git.</li>
+        <li>Default editor</li>
+        <li>default branch to push</li>
+      </ul>
       </p>
     </aside>
   </section>
@@ -369,11 +374,12 @@
   <section data-state="background" data-background-video="videos/git-aliases.mp4" data-background-video-loop data-background-color="#003954">
 
    <aside class="notes">
+     <li>Short names for git commands.</li>
      <li> git log</li>
      <li> git lol ##graph</li>
      <li> git ll adds numstat, number of lines changed</li>
      <li> git lola same as lol but all branches</li>
-     <li> git lolm just my commit</li>
+     <li> git lolm just my commits</li>
   </aside>
   </section>
 
@@ -381,7 +387,7 @@
     <h2>Ignoring files</h2>
     <p>Per machine: ~/.gitconfig</p>
     <p>Per project: .gitignore file in the repository</p>
-    <p>Per repo:  .git/info/excludes</p>
+    <p>Per repo instance:  .git/info/excludes</p>
   </section>
 
   <section>
@@ -389,11 +395,11 @@
      <pre><code>
      .git/hooks
      </pre></code>
-     <p><a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">Customizing Git - Git Hooks</a></p>
+     <p><a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">Customizing Git - Git Hooks <br /> git-scm.com/book/en/v2/Customizing-Git-Git-Hooks</a></p>
   </section>
 
   <section>
-    <h2>Pre commit </h2>
+    <h2>Pre-commit </h2>
      <p>Code linting.</p>
       <p> <a href="https://github.com/andrewmriley/drupal-site-precommit">github.com/andrewmriley/drupal-site-precommit</a></p>
   </section>
@@ -403,9 +409,6 @@
      <p>Do tasks like copy your commit message to your clipboard?</p>
      <pre><code>
 #!/bin/bash
-
-# Create dayone entry with last commit message
-git log --pretty=format:"%s @${PWD##*/}%n%b" -1 HEAD | dayone new
 
 # Copy last commit message copied to clipboard
 git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
@@ -425,7 +428,7 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
   [init]
   templatedir = ~/.git_template
 </code></pre>
-    <p>A good tutorial for setting this up. <a href="http://brettterpstra.com//2014/03/20/logging-git-commits-with-doing/">Logging Git commits with doing</a></p>
+<p>A good tutorial for setting this up. Logging Git commits with doing. <br /><a href="http://brettterpstra.com/2014/03/20/logging-git-commits-with-doing/">brettterpstra.com/2014/03/20/logging-git-commits-with-doing</a></p>
   </section>
 
   <section>
@@ -435,34 +438,40 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
   <section>
     <h2><a href="http://jonas.nitro.dk/tig/">Tig</a></h2>
      <p>Text-mode interface for git.</p>
+     <p><a href="http://jonas.nitro.dk/tig/">jonas.nitro.dk/tig</a></p>
   </section>
 
   <section data-state="background" data-background-video="videos/tig.mp4" data-background-video-loop data-background-color="#003954">
+    <aside class="notes">
+      <p>Great for navigating Git history as well as staging changes for commits.</p>
+    </aside>
   </section>
 
   <section>
-    <h2> <a href="https://github.com/michaeldfallen/git-radar">Git radar</a></h2>
-     <img src="assets/git-radar-file-status.png" alt="" width="" height="" border="0" />
-    <p>A more basic tool, <a href="https://github.com/djl/vcprompt">vcprompt</a>.</p>
+    <h2>Git HUD</h2>
+     <img src="assets/gitHUD.png" alt="" width="" height="" border="0" />
+    <p>A heads up display for your Git repos.</p>
+    <p><a href="https://github.com/gbataille/gitHUD">github.com/gbataille/gitHUD</a></p>
   </section>
 </section>
 
 <section>
   <section>
     <h2>Vim</h2>
-     <img src="assets/iamdevloper.png" alt="" width="" height="" border="0" />
   </section>
 
   <section  data-state="background" data-background="assets/carey-typing.gif" data-background-size="95%" >
   </section>
-
+  <section>
+    <img src="assets/iamdevloper.png" alt="" width="" height="" border="0" />
+  </section>
   <section>
     <h2>Why Vim?</h2>
-    <p class="fragment">I plan on coding for many years.</p>
+    <p class="fragment">I plan on coding for many years (What editor was hot two years ago again?).</p>
     <p class="fragment">I'm already in the shell.</p>
-    <p class="fragment">Open source and availible on all systems.</p>
-    <p class="fragment">Will NEVER die.</p>
-    <p class="fragment">I love using the keyboard.</p>
+    <p class="fragment">Open source and available on all systems.</p>
+    <p class="fragment">It will NEVER die.</p>
+    <p class="fragment">I love using the keyboard (Vim is designed for the keyboard first).</p>
     <aside class="notes">
       RSI
     </aside>
@@ -475,29 +484,18 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
   </section>
 
   <section>
-    <h3>Plugins</h3>
-    <ul>
-    <p><a href="https://github.com/ctrlpvim/ctrlp.vim">ctrlP.vim</a></p>
+    <h3>Plugins of Note</h3>
     <p><a href="https://github.com/tpope/vim-fugitive">Vim Fugitive - Git</a></p>
     <p><a href="https://github.com/airblade/vim-gitgutter">Gitgutter - Git</a></p>
     <p><a href="https://github.com/joonty/vdebug.git">Vdebug - Debugging</a></p>
     <p><a href="https://github.com/tpope/vim-surround">Vim Surround</a></p>
     <p><a href="https://www.drupal.org/project/vimrc">Vim Plugin For Drupal</a></p>
-    <p><a href="https://github.com/vim-airline/vim-airline">Vim Airline</a></p>
-    <p><a href="https://github.com/VundleVim/Vundle.vim">Vundle - Plugin management</a></p>
-    </ul>
   </section>
 
-  <section>
-    <h2> <a href="https://github.com/ctrlpvim/ctrlp.vim">ctrlP.vim</a></h2>
-    Fuzzy file, buffer, mru, tag, etc finder.
-  </section>
-
-  <section  data-state="background" data-background-video="videos/vim-ctrlp.mp4" data-background-video-loop data-background-color="#003954">
-  </section>
   <section>
     <h2>Vim Fugitive - Git</h2>
      <p>A Git wrapper so awesome, it should be illegal.</p>
+     <p><a href="https://github.com/tpope/vim-fugititve">github.com/tpope/vim-fugititve</a></p>
   </section>
 
   <section  data-state="background" data-background-video="videos/vim-fugitive.mp4" data-background-video-loop data-background-color="#003954">
@@ -505,52 +503,60 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
 
   <section>
     <h2>Gitgutter - Git</h2>
+    <p><a href="https://github.com/airblade/vim-gitgutter">github.com/airblade/vim-gitgutter</a></p>
   </section>
 
   <section data-state="background" data-background-video="videos/vim-gitgutter.mp4" data-background-video-loop data-background-color="#003954">
   </section>
 
   <section>
-    <h2>Vdebug - Debugging</h2>
+    <h2>Vdebug - Xdebug Client for Vim</h2>
+    <p><a href="https://github.com/joonty/vdebug.git">github.com/joonty/vdebug.git</a></p>
   </section>
 
   <section data-state="background" data-background="assets/vdebug.gif" data-background-video-loop data-background-color="#003954">
   </section>
 
   <section>
-    <h2><a href="https://www.drupal.org/project/vimrc
-">Vim Plugin For Drupal</a></h2>
-    drupal.org/project/vimrc
+    <h2><a href="https://www.drupal.org/project/vimrc">Vim Plugin For Drupal</a></h2>
+    <p><a href="https://www.drupal.org/project/vimrc">drupal.org/project/vimrc</a></p>
   </section>
 
   <section  data-state="background" data-background-video="videos/vim-drupalvimrc.mp4" data-background-video-loop data-background-color="#003954">
   </section>
-
 </section>
 
 <section>
   <section>
     <h2>Drush</h2>
+      <p class="fragment">Fast local server</p>
       <p class="fragment">Download and enable modules</p>
-      <p class="fragment"> Backup and import databases</p>
-      <p class="fragment">Run updates</p>
+      <p class="fragment">Backup and import databases</p>
+      <p class="fragment">Perform updates</p>
       <p class="fragment">Watch logs</p>
       <p class="fragment">Log in as any user and much much more!</p>
+  </section>
+  <section>
+    <h2>Drush serve</h2>
+
+    <pre>
+      <code>
+      drush serve
+      </code>
+    </pre>
+    <p>Serve Drupal locally using PHP's built in server.</p>
   </section>
 
   <section>
     <h2>Drush aliases</h2>
-    <p class="fragment">Drush commands against a specific Drupal site, even remote sites.</p>
+    <p>Drush commands against a specific Drupal site, even remote sites.</p>
     <pre class="fragment"><code>drush @youralias somecommand -y</code></pre>
     <pre class="fragment"><code>drush use @youralias</code></pre>
-    <pre class="fragment"><code>drush somecommand -y</code></pre>
+    <pre class="fragment"><code>drush updb -y</code></pre>
     <aside class="notes">
-    <p>Tired of typing the full alias for every command</p>
-    <p>Now you can just type</p>
+      <p>Tired of typing the full alias for every command</p>
+      <p>Now you can just type</p>
     </aside>
-  </section>
-
-  <section data-state="background" data-background-video="videos/drush-use.mp4" data-background-video-loop data-background-color="#003954">
   </section>
 
   <section>
@@ -565,7 +571,10 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
 <section>
   <section>
     <h2><a href="https://drupalconsole.com/">Drupal Console</a></h2>
-      <p class="fragment">The new CLI for Drupal. A tool to generate boilerplate code, interact with and debug Drupal.</p>
+    <p><a href="drupalconsole.com">drupalconsole.com</a></p>
+    <p class="fragment">Another CLI for Drupal.</p>
+    <p class="fragment">Generate boilerplate code</p>
+    <p class="fragment">Interact with and debug Drupal.</p>
   </section>
 
   <section data-state="background" data-background-video="videos/drupal-console-chain.mp4" data-background-video-loop data-background-color="#003954">
@@ -665,6 +674,7 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
 
   <section>
     <h2>Tmuxinator</h2>
+    <p>Script and automate Tmux sessions.</p>
   </section>
 
   <section>
@@ -688,40 +698,34 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
 
 <section>
   <h1>Resources</h1>
-  <p><a href="https://bitbucket.org/kepford/dotfiles">My Dot files</a></p>
-  <p><a href="https://dotfiles.github.io/">dotfiles - Your unofficial guide to dotfiles on GitHub.</a></p>
-  <p><a href="http://shelldevel.net/">ShellDevel</a></p>
-  <p><a href="https://vimeo.com/84183973">Craft your own IDE in the shell - Wynn Netherland</a></p>
+  <p><a href="https://github.com/kepford/dotfiles">My Dot files - github.com/kepford/dotfiles</a></p>
+  <p><a href="https://dotfiles.github.io/">dotfiles - Unofficial guide to dotfiles on GitHub (dotfiles.github.io).</a></p>
+  <p><a href="http://shelldevel.net/">ShellDevel - shelldevel.net</a></p>
+  <p><a href="https://vimeo.com/84183973">Craft your own IDE in the shell - Wynn Netherland - (vimeo.com/84183973)</a></p>
 </section>
 
 <section>
-  <h2>Resources</h2>
-
-  <h3>Git</h3>
-  <p><a href="http://gitready.com/">Git Ready</a></p>
-  <p><a href="http://pcottle.github.io/learnGitBranching/">Learn Git branching</a></p>
-  <p><a href="https://try.github.io/levels/1/challenges/1">Got 15 minutes and want to learn Git?</a></p>
-  <p><a href="https://github.com/andrewmriley/drupal-site-precommit">Git precommit hooks</a></p>
+  <h2>Git - Resources</h2>
+  <p><a href="http://gitready.com/">Git Ready - gitready.com</a></p>
+  <p><a href="http://pcottle.github.io/learnGitBranching/">Learn Git branching - pcottle.github.io/learnGitBranching/</a></p>
+  <p><a href="https://try.github.io/levels/1/challenges/1">Got 15 minutes and want to learn Git? - try.github.io</a></p>
+  <p><a href="https://github.com/andrewmriley/drupal-site-precommit">Git precommit hooks - github.com/andrewmriley/drupal-site-precommit</a></p>
 </section>
 
 <section>
-  <h2>Resources</h2>
-
-  <h3>Vim</h3>
-  <p><a href="http://vimcasts.org/">Vim Casts</a></p>
-  <p><a href="https://mikecoutermarsh.com/boston-vim-learning-vim-in-a-week/">Boston Vim: Learning Vim in a Week</a></p>
-  <p><a href="https://www.youtube.com/watch?v=3TX3kV3TICU">Let Vim Do the Typing</a>
-  <p><a href="http://vim-adventures.com/">Vim adventures</a></p>
-  <p><a href="http://www.vimgolf.com/">VimGolf</a></p>
+  <h2>Vim - Resources</h2>
+  <p><a href="http://vimcasts.org/">Vim Casts - vimcasts.org</a></p>
+  <p><a href="https://mikecoutermarsh.com/boston-vim-learning-vim-in-a-week/">Learning Vim in a Week - mikecoutermarsh.com/boston-vim-learning-vim-in-a-week</a></p>
+  <p><a href="https://www.youtube.com/watch?v=3TX3kV3TICU">Let Vim Do the Typing - youtube.com/watch?v=3TX3kV3TICU</a>
+  <p><a href="http://vim-adventures.com/">Vim adventures - vim-adventures.com</a></p>
+  <p><a href="http://www.vimgolf.com/">VimGolf - vimgolf.com</a></p>
 </section>
 
 <section>
-  <h2>Resources</h2>
-
-  <h3>Tmux</h3>
-  <p> <a href="http://www.mediacurrent.com/blog/efficient-drupal-development-tmux-and-tmuxinator">Efficient Drupal Development with Tmux and Tmuxinator</a></p>
-  <p><a href="https://upcase.com/tmux">Tmux - Upcase - Paid but very good.</a></p>
-  <p><a href="https://robots.thoughtbot.com/a-tmux-crash-course">A tmux Crash Course</a></p>
+  <h2>Tmux Resources</h2>
+  <p><a href="http://www.mediacurrent.com/blog/efficient-drupal-development-tmux-and-tmuxinator">Efficient Drupal Development with Tmux and Tmuxinator</a></p>
+  <p><a href="https://upcase.com/tmux">Tmux - Upcase - Paid but worth the cost.</a></p>
+  <p><a href="https://robots.thoughtbot.com/a-tmux-crash-course">A Tmux Crash Course</a></p>
 </section>
 
 <section>
@@ -730,6 +734,7 @@ git log --pretty=format:"%s %n%b" -1 HEAD | pbcopy
   <p><a href="http://mediacurrent.com">mediacurrent.com</a></p>
   <p><a href="http://theweeklydrop.com">TheWeeklyDrop.com</a></p>
 </section>
+
 </div>
 </div>
 
